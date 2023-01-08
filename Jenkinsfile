@@ -11,11 +11,5 @@ pipeline {
                     archiveArtifacts artifacts: '**/*.war'
                 }
             }
-        }
-        stage('Deploy Application') {
-            steps {
-                bat 'mvn deploy'
-            }
-    }
-  }    
-}
+         }    
+      }
