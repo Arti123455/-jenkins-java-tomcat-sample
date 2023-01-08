@@ -17,4 +17,5 @@ pipeline {
                 bat 'mvn deploy'
             }
     }
+  }    
 }
