@@ -12,6 +12,10 @@ pipeline {
                     archiveArtifacts artifacts: '**/*.war'
                 }
               }
+            stage(Deployment On Test) {
+                steps {
+                    bat 
+                
             }
          }    
       }
