@@ -18,7 +18,7 @@ pipeline{
             }
             stage('Deployment On Test') {
                 steps {
-                    deploy adapters: [tomcat8(credentialsId: 'credtomcat', path: '', url: 'http://54.159.195.182:8090')], contextPath: 'spring-boot-war-example', war: '**/*.war'
+                    deploy adapters: [tomcat8(credentialsId: 'credtomcat', path: '', url: 'http://54.159.195.182:8090')], contextPath: 'tomcat-sample', war: '**/*.war'
 
                 }
             }
