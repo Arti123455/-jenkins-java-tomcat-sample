@@ -16,13 +16,13 @@ pipeline {
                 }
               }
             }
-            stage(Deployment On Test) {
+            stage('Deployment On Test') {
                 steps {
                     deploy adapters: [tomcat8(credentialsId: 'credtomcat', path: '', url: 'http://54.159.195.182:8090')], contextPath: 'spring-boot-war-example', war: '**/*.war'
 
                 }
             }
-         }   
+            
             post{
         always{
             echo "========always========"
