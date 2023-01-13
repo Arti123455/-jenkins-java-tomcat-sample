@@ -1,4 +1,4 @@
-pipeline {
+pipeline{
     agent any
     tools {
         maven 'Maven' 
@@ -9,7 +9,7 @@ pipeline {
                 bat 'mvn -f pom.xml clean package'
             }
         
-            post {
+            post{
                 success {
                     echo "Now Archiving the Artifacts....."
                     archiveArtifacts artifacts: '**/*.war'
